@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace longlang\phpkafka\Sasl;
 
 use longlang\phpkafka\Config\CommonConfig;
+use longlang\phpkafka\Socket\SocketInterface;
 
 interface SaslInterface
 {
@@ -19,4 +20,12 @@ interface SaslInterface
      * 返回授权信息.
      */
     public function getAuthBytes(): string;
+
+    /**
+     * 设置套接字
+     *
+     * @param SocketInterface $socket
+     * @return void
+     */
+    public function setSocket(SocketInterface $socket): void;
 }
