@@ -11,7 +11,7 @@ use Aws\Signature\SignatureV4;
 use GuzzleHttp\Psr7\Request;
 use longlang\phpkafka\Socket\SocketInterface;
 
-class AwsMskIamSasl implements SaslInterface
+class AwsIamSasl implements SaslInterface
 {
     const SIGN_ACTION = "kafka-cluster:Connect";
     const SIGN_SERVICE = "kafka-cluster";
